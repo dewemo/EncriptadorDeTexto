@@ -15,15 +15,15 @@
         <section class="encriptar">
             <div>
                 <article>
-                    <textarea name="" class="encriptar__textoEncriptar" rows=10" cols="60" autofocus required placeholder="Ingrese texto aquí"></textarea>
+                    <textarea id="textoEncriptar" class="encriptar__textoEncriptar" rows=10" cols="60" autofocus required placeholder="Ingrese texto aquí"></textarea>
                 </article>
                 <span class="precaucion">
                     <i class="fas fas-solid fa-exclamation"></i> Solo letras minúsculas y sin acentos.
                 </span>
             </div>
             <div class="encriptar__botones">
-                <a href="#" class="encriptar__botones__encriptar">Encriptar</a>
-                <a href="#" class="encriptar__botones__desencriptar">Desencriptar</a>
+                <a href="#" class="encriptar__botones__encriptar" onclick="encriptarTexto();">Encriptar</a>
+                <a href="#" class="encriptar__botones__desencriptar" onclick="encriptarTexto2();">Desencriptar</a>
             </div>        
         </section>
         <aside class="encriptado">
@@ -37,6 +37,6 @@
         <p class="footer__correo">dewemo.co@gmail.com</p>
         <p class="footer__copyright">Copyright &#169 2024</p>        
     </footer>
-
+    <script src="./js/app.js"></script>
 </body>
 </html>
