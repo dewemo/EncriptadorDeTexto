@@ -41,5 +41,11 @@ function encriptarTexto() {
     });
     
     cadenaTextoEncriptado = textoEncriptado.join('');
-    console.log(cadenaTextoEncriptado);    
+    document.getElementById('textoEncriptado__contenidoMensaje').innerHTML = cadenaTextoEncriptado;
+    mostrarMensajeEncriptado();
+}
+
+function mostrarMensajeEncriptado() {
+    document.getElementById('encriptado').style.display = 'none';
+    document.getElementById('textoEncriptado').style.display = 'inline';
 }

@@ -36,9 +36,9 @@
 .precaucion {
     font-family: 'Montserrat', sans-serif;
     margin: 1px 15px;
-    font-size: 0.6em;
-    
+    font-size: 0.6em;    
 }
+
 .encriptar__botones {
     display: flex;
     align-items: center;
@@ -78,6 +78,7 @@
     background-color: #1756a8;
     box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.30)
 }
+
 .encriptado {
     background-color: white;
     border-radius: 32px;
@@ -92,9 +93,58 @@
     text-align: center;
 }
 
-.encriptado__tituloMensaje, .encriptado__contenidoMensaje {
+.encriptado__tituloMensaje, .encriptado__contenidoMensaje, .textoEncriptado__contenidoMensaje {
     font-family: 'Montserrat', sans-serif;
     margin: 10px;
+}
+
+.textoEncriptado {
+    background-color: white;
+    border-radius: 32px;
+    margin: 40px 90px;
+    padding: 10px;
+    width: 350px; 
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    text-align: center; 
+}
+
+#textoEncriptado {
+    display: none;
+}
+
+.textoEncriptado__contenidoMensaje {    
+    margin: 20px;
+    padding: 15px;
+    height: 400px;
+    flex-flow: column wrap; 
+}
+
+.textoEncriptado__botonCopiar {
+    background-color: #83ed76;
+    width: 120px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 15px;
+    margin: 0px 15px 10px;
+    text-decoration: none;
+    color: #363030;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+.textoEncriptado__botonCopiar:hover {
+    background-color: #428f37;
+    color: #faf5f5;
+    box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.30)
+}
+
+.textoEncriptado__noActivo {
+    /*pointer-events: none; 
+    cursor: default; */
 }
 
 .footer {
