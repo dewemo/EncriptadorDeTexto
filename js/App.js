@@ -10,11 +10,14 @@ La letra "u" es convertida para "ufat"
 
 let textoEncriptar = [];
 let textoEncriptado = [];
+let textoDesencriptar = [];
+let textoDesencriptado = []
 let cadenaTextoEncriptado;
+
 
 function encriptarTexto() {
 
-    textoEncriptar = (document.getElementById('textoEncriptar').value).split('');    
+    textoEncriptar = (document.getElementById('textoProcesar').value).split('');    
     
     textoEncriptar.map(function(letraBuscar) {
         
@@ -41,11 +44,15 @@ function encriptarTexto() {
     });
     
     cadenaTextoEncriptado = textoEncriptado.join('');
-    document.getElementById('textoEncriptado__contenidoMensaje').innerHTML = cadenaTextoEncriptado;
+    document.getElementById('textoProcesado__contenidoMensaje').innerHTML = cadenaTextoEncriptado;
     mostrarMensajeEncriptado();
 }
 
 function mostrarMensajeEncriptado() {
-    document.getElementById('encriptado').style.display = 'none';
-    document.getElementById('textoEncriptado').style.display = 'inline';
+    document.getElementById('procesado').style.display = 'none';
+    document.getElementById('textoProcesado').style.display = 'inline';
+}
+
+function desencriptarTexto() {
+    
 }

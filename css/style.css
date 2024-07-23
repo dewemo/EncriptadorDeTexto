@@ -22,11 +22,11 @@
     justify-content: space-between;
     background-color: rgb(229, 229, 238);
 }
-.encriptar {
+.procesar {
     padding: 30px;
 }
 
-.encriptar__textoEncriptar {
+.procesar__textoProcesar {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin: 15px;
@@ -39,14 +39,14 @@
     font-size: 0.6em;    
 }
 
-.encriptar__botones {
+.procesar__botones {
     display: flex;
     align-items: center;
     margin: 15px;
     padding: 5px;
 }
 
-.encriptar__botones__encriptar {
+.procesar__botones__encriptar {
     background-color: #0f69df;
     width: 120px;
     text-align: center;
@@ -60,7 +60,7 @@
     font-family: 'Roboto Mono', sans-serif;    
 }
 
-.encriptar__botones__desencriptar {
+.procesar__botones__desencriptar {
     background-color: #707d8e;
     width: 120px;
     text-align: center;
@@ -74,12 +74,12 @@
     font-family: 'Roboto Mono', sans-serif;    
 }
 
-.encriptar__botones__encriptar:hover, .encriptar__botones__desencriptar:hover {
+.procesar__botones__encriptar:hover, .procesar__botones__desencriptar:hover {
     background-color: #1756a8;
     box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.30)
 }
 
-.encriptado {
+.procesado {
     background-color: white;
     border-radius: 32px;
     margin: 40px 90px;
@@ -93,12 +93,12 @@
     text-align: center;
 }
 
-.encriptado__tituloMensaje, .encriptado__contenidoMensaje, .textoEncriptado__contenidoMensaje {
+.procesado__tituloMensaje, .procesado__contenidoMensaje, .textoEncriptado__contenidoMensaje {
     font-family: 'Montserrat', sans-serif;
     margin: 10px;
 }
 
-.textoEncriptado {
+.textoProcesado {
     background-color: white;
     border-radius: 32px;
     margin: 40px 90px;
@@ -112,18 +112,18 @@
     text-align: center; 
 }
 
-#textoEncriptado {
+#textoProcesado {
     display: none;
 }
 
-.textoEncriptado__contenidoMensaje {    
+.textoProcesado__contenidoMensaje {    
     margin: 20px;
     padding: 15px;
     height: 400px;
     flex-flow: column wrap; 
 }
 
-.textoEncriptado__botonCopiar {
+.textoProcesado__botonCopiar {
     background-color: #83ed76;
     width: 120px;
     text-align: center;
@@ -136,13 +136,13 @@
     font-family: 'Roboto Mono', sans-serif;
 }
 
-.textoEncriptado__botonCopiar:hover {
+.textoProcesado__botonCopiar:hover {
     background-color: #428f37;
     color: #faf5f5;
     box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.30)
 }
 
-.textoEncriptado__noActivo {
+.textoProcesado__noActivo {
     /*pointer-events: none; 
     cursor: default; */
 }
