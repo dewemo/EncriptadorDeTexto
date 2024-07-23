@@ -11,12 +11,10 @@ La letra "u" es convertida para "ufat"
 let textoEncriptar = [];
 let textoEncriptado = [];
 let textoDesencriptar = [];
-let textoDesencriptado = []
+let textoDesencriptado = [];
 let cadenaTextoEncriptado;
 
-
 function encriptarTexto() {
-
     textoEncriptar = (document.getElementById('textoProcesar').value).split('');    
     
     textoEncriptar.map(function(letraBuscar) {
@@ -41,18 +39,50 @@ function encriptarTexto() {
                 textoEncriptado.push(letraBuscar);
                 break;
         }
-    });
-    
+    });    
     cadenaTextoEncriptado = textoEncriptado.join('');
     document.getElementById('textoProcesado__contenidoMensaje').innerHTML = cadenaTextoEncriptado;
-    mostrarMensajeEncriptado();
+    mostrarMensaje();
 }
 
-function mostrarMensajeEncriptado() {
+function mostrarMensaje() {
     document.getElementById('procesado').style.display = 'none';
     document.getElementById('textoProcesado').style.display = 'inline';
 }
 
+
+// ********* Proceso de Desencriptar texto *********
+
+let busqueda = ['ai', 'enter', 'imer', 'ober', 'ufat'];
+
 function desencriptarTexto() {
-    
+    textoDesencriptar = (document.getElementById('textoProcesar').value);   
+    let resultado; 
+
+    busqueda.map(function(codBuscar) {
+        switch (codBuscar) {
+            case 'ai':
+                resultado = textoDesencriptar.replace(/ai/g, 'a'); 
+                textoDesencriptar = resultado;
+                break;
+            case 'enter':
+                resultado = textoDesencriptar.replace(/enter/g, 'e');
+                textoDesencriptar = resultado;  
+                break;    
+            case 'imer':
+                resultado = textoDesencriptar.replace(/imer/g, 'i');
+                textoDesencriptar = resultado;  
+                break;
+            case 'ober':
+                resultado = textoDesencriptar.replace(/ober/g, 'o');
+                textoDesencriptar = resultado; 
+                break;
+            case 'ufat':
+                resultado = textoDesencriptar.replace(/ufat/g, 'u'); 
+                textoDesencriptar = resultado;
+                break;            
+        }
+    });
+    document.getElementById('textoProcesado__contenidoMensaje').innerHTML = resultado;
+    mostrarMensaje();
 }

@@ -20,8 +20,9 @@
 .contenido {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(229, 229, 238);
+    background-color: rgb(229, 229, 238);    
 }
+
 .procesar {
     padding: 30px;
 }
@@ -30,7 +31,9 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin: 15px;
+    padding: 10px;
     resize: none;
+    border-radius: 10px;
 }
 
 .precaucion {
