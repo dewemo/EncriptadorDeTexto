@@ -130,23 +130,21 @@
     display: none;
 }
 
-.textoProcesado__contenidoMensaje {    
+.textoProcesado__contenidoMensaje {   
     margin: 10px;
     padding: 15px;
-    height: 320px;
-    flex-flow: column wrap;
-    
+    height: 330px;
+    flex-flow: column wrap;    
 }
 
 .textoProcesado__ok {
-    background-color: #83ed76;
+    background-color: #47913d;
     border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-    height: 20px;
-    color: #363030;
-    font-weight: bold;
-    font-size: 10px;    
+    margin: 5px;
+    padding: 15px;
+    height: 25px;
+    color: #faf3f3;    
+    font-size: 11px;    
 }
 
 .procesadoBotones {
@@ -170,9 +168,7 @@
     text-decoration: none;
     color: #363030;
     font-family: 'Roboto Mono', sans-serif;
-    flex-flow: column wrap;  
-    
-    
+    flex-flow: column wrap; 
 }
 
 .textoProcesado__botonCopiar:hover, .textoProcesado__botonFinalizar:hover {

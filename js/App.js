@@ -1,15 +1,3 @@
-/*document.getElementById("selector").onclick = () => {
-    document.getElementById("link").classList.toggle("disable")
- }*/
-
-    /*
- document.getElementsByClassName('procesar__botones__encriptar').onclick = () => {
-    document.getElementById('procesar__botones__encriptar').classList.toggle("disable")
- }*/
-
-
- 
-
 /*
 Las "llaves" de encriptación que utilizaremos son las siguientes:
 
@@ -109,7 +97,6 @@ async function copiarMensaje() {
     let mensajeCopiar = document.getElementById('textoProcesado__contenidoMensaje').value;    
     try {
         await navigator.clipboard.writeText(mensajeCopiar);
-        document.getElementById('textoProcesado__ok').innerHTML = 'Contenido copiado al portapapeles';
         document.getElementById('textoProcesado__ok').style.display = 'inline';
     } catch (err) {
         console.error('Error al copiar: ', err);        
@@ -121,7 +108,6 @@ async function copiarMensaje() {
 function finalizarProceso() {    
     document.getElementById('textoProcesar').value = " ";
     document.getElementById('textoProcesado__contenidoMensaje').value = " ";
-    document.getElementById('textoProcesado__ok').innerHTML = ' ';
     document.getElementById('procesado').style.display = 'inline';
     document.getElementById('textoProcesado').style.display = 'none';
     document.getElementById('textoProcesado__ok').style.display = 'none';
