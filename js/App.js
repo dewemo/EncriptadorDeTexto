@@ -1,3 +1,15 @@
+/*document.getElementById("selector").onclick = () => {
+    document.getElementById("link").classList.toggle("disable")
+ }*/
+
+    /*
+ document.getElementsByClassName('procesar__botones__encriptar').onclick = () => {
+    document.getElementById('procesar__botones__encriptar').classList.toggle("disable")
+ }*/
+
+
+ 
+
 /*
 Las "llaves" de encriptación que utilizaremos son las siguientes:
 
@@ -13,6 +25,8 @@ let textoEncriptado = [];
 let textoDesencriptar = [];
 let textoDesencriptado = [];
 let cadenaTextoEncriptado;
+
+// ********* Proceso de Encriptar texto *********
 
 function encriptarTexto() {
     textoEncriptar = (document.getElementById('textoProcesar').value).split('');    
@@ -41,8 +55,10 @@ function encriptarTexto() {
         }
     });    
     cadenaTextoEncriptado = textoEncriptado.join('');
-    document.getElementById('textoProcesado__contenidoMensaje').innerHTML = cadenaTextoEncriptado;
+    document.getElementById('textoProcesado__contenidoMensaje').value = cadenaTextoEncriptado;
+    textoEncriptado = [];
     mostrarMensaje();
+    habilitarBotones();
 }
 
 function mostrarMensaje() {
@@ -52,7 +68,6 @@ function mostrarMensaje() {
 
 
 // ********* Proceso de Desencriptar texto *********
-
 let busqueda = ['ai', 'enter', 'imer', 'ober', 'ufat'];
 
 function desencriptarTexto() {
@@ -83,6 +98,38 @@ function desencriptarTexto() {
                 break;            
         }
     });
-    document.getElementById('textoProcesado__contenidoMensaje').innerHTML = resultado;
+    document.getElementById('textoProcesado__contenidoMensaje').value = resultado;
     mostrarMensaje();
+    habilitarBotones();
+}
+
+// ********* Proceso de copiar texto al portapapeles *********
+
+async function copiarMensaje() {    
+    let mensajeCopiar = document.getElementById('textoProcesado__contenidoMensaje').value;    
+    try {
+        await navigator.clipboard.writeText(mensajeCopiar);
+        document.getElementById('textoProcesado__ok').innerHTML = 'Contenido copiado al portapapeles';
+        document.getElementById('textoProcesado__ok').style.display = 'inline';
+    } catch (err) {
+        console.error('Error al copiar: ', err);        
+    }    
+}
+
+// ********* Finalizar proceso de encriptar y desencriptar mensaje *********
+
+function finalizarProceso() {    
+    document.getElementById('textoProcesar').value = " ";
+    document.getElementById('textoProcesado__contenidoMensaje').value = " ";
+    document.getElementById('textoProcesado__ok').innerHTML = ' ';
+    document.getElementById('procesado').style.display = 'inline';
+    document.getElementById('textoProcesado').style.display = 'none';
+    document.getElementById('textoProcesado__ok').style.display = 'none';
+    habilitarBotones();
+}
+// ********* Habilitar y deshabilitar botones para controlar funcionalidad *********
+
+function habilitarBotones() {
+    document.getElementById("btn-encriptar").classList.toggle("activo");
+    document.getElementById("btn-desencriptar").classList.toggle("activo");     
 }

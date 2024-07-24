@@ -15,15 +15,15 @@
         <section class="procesar">
             <div>
                 <article>
-                    <textarea id="textoProcesar" class="procesar__textoProcesar" rows=10" cols="60" autofocus required placeholder="Ingrese texto aquí"></textarea>
+                    <textarea id="textoProcesar" class="procesar__textoProcesar" rows="10" cols="60" placeholder="Ingrese texto aquí"></textarea>
                 </article>
                 <span class="precaucion">
                     <i class="fas fas-solid fa-exclamation"></i> Solo letras minúsculas y sin acentos.
                 </span>
             </div>
             <div class="procesar__botones">
-                <a href="#" class="procesar__botones__encriptar" onclick="encriptarTexto();">Encriptar</a>
-                <a href="#" class="procesar__botones__desencriptar" onclick="desencriptarTexto();">Desencriptar</a>
+                <a href="#" id="btn-encriptar" class="procesar__botones__encriptar activo inactivo" onclick="encriptarTexto();">Encriptar</a>
+                <a href="#" id="btn-desencriptar" class="procesar__botones__desencriptar activo inactivo" onclick="desencriptarTexto();">Desencriptar</a>
             </div>        
         </section>
         <aside id="procesado" class="procesado">
@@ -32,9 +32,15 @@
             <p class="procesado__contenidoMensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
         </aside>
         <aside id="textoProcesado" class="textoProcesado">
-            <p id="textoProcesado__contenidoMensaje" class="textoProcesado__contenidoMensaje"></p>
-            <a href="#" class="textoProcesado__botonCopiar textoProcesado__noActivo">Copiar</a>
-        </aside>
+            <textarea id="textoProcesado__contenidoMensaje" class="textoProcesado__contenidoMensaje" cols="20"></textarea>
+            <div class="procesadoBotones">
+                <a href="#" class="textoProcesado__botonCopiar" onclick="copiarMensaje();">Copiar</a>
+                <a href="#" class="textoProcesado__botonFinalizar" onclick="finalizarProceso();">Finalizar</a>
+            </div>            
+            <span id="textoProcesado__ok" class="textoProcesado__ok">
+                <i class="fas fas-solid fa-exclamation"></i>
+            </span>            
+        </aside>        
     </div>
     <footer class="footer">
         <p class="footer__autor">Raúl Rocha A.</p>

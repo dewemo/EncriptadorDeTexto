@@ -17,6 +17,16 @@
     height: 200px;    
 }
 
+.inactivo {
+    pointer-events: none;
+    text-decoration:none;
+    color:grey;
+  }
+
+  .activo {
+    pointer-events: auto;    
+  }
+
 .contenido {
     display: flex;
     justify-content: space-between;
@@ -27,13 +37,14 @@
     padding: 30px;
 }
 
-.procesar__textoProcesar {
+.procesar__textoProcesar, .textoProcesado__contenidoMensaje {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin: 15px;
     padding: 10px;
     resize: none;
     border-radius: 10px;
+    border: none;
 }
 
 .precaucion {
@@ -96,7 +107,7 @@
     text-align: center;
 }
 
-.procesado__tituloMensaje, .procesado__contenidoMensaje, .textoEncriptado__contenidoMensaje {
+.procesado__tituloMensaje, .procesado__contenidoMensaje, .textoProcesado__contenidoMensaje, .textoProcesado__ok {
     font-family: 'Montserrat', sans-serif;
     margin: 10px;
 }
@@ -112,42 +123,62 @@
     flex-direction: column;
     align-items: center;
     justify-content:space-between;
-    text-align: center; 
+    text-align: center;    
 }
 
-#textoProcesado {
+#textoProcesado, .textoProcesado__ok {
     display: none;
 }
 
 .textoProcesado__contenidoMensaje {    
-    margin: 20px;
+    margin: 10px;
     padding: 15px;
-    height: 400px;
-    flex-flow: column wrap; 
+    height: 320px;
+    flex-flow: column wrap;
+    
 }
 
-.textoProcesado__botonCopiar {
+.textoProcesado__ok {
+    background-color: #83ed76;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    height: 20px;
+    color: #363030;
+    font-weight: bold;
+    font-size: 10px;    
+}
+
+.procesadoBotones {
+    margin: 10px;
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoProcesado__botonCopiar, .textoProcesado__botonFinalizar {
     background-color: #83ed76;
     width: 120px;
     text-align: center;
     border-radius: 10px;
     font-size: 16px;
     padding: 15px;
-    margin: 0px 15px 10px;
+    margin: 10px;
     text-decoration: none;
     color: #363030;
     font-family: 'Roboto Mono', sans-serif;
+    flex-flow: column wrap;  
+    
+    
 }
 
-.textoProcesado__botonCopiar:hover {
+.textoProcesado__botonCopiar:hover, .textoProcesado__botonFinalizar:hover {
     background-color: #428f37;
     color: #faf5f5;
     box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.30)
-}
-
-.textoProcesado__noActivo {
-    /*pointer-events: none; 
-    cursor: default; */
 }
 
 .footer {
