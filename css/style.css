@@ -30,14 +30,20 @@
 .contenido {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(229, 229, 238);    
+    background-color: rgb(229, 229, 238); 
+    height: 100%;
 }
 
 .procesar {
-    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;       
 }
 
-.procesar__textoProcesar, .textoProcesado__contenidoMensaje {
+.procesar__textoProcesar {
+    width: 90%;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin: 15px;
@@ -56,19 +62,22 @@
 .procesar__botones {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 90%;
     margin: 15px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .procesar__botones__encriptar {
     background-color: #0f69df;
     width: 120px;
     text-align: center;
+    align-items: center;
     border-radius: 10px;
     font-size: 16px;
     padding: 15px;
     justify-content:space-between;
-    margin: 0px 15px 10px;
+    margin: 5px;
     text-decoration: none;
     color: #faf3f3;
     font-family: 'Roboto Mono', sans-serif;    
@@ -78,11 +87,12 @@
     background-color: #707d8e;
     width: 120px;
     text-align: center;
+    align-items: center;
     border-radius: 10px;
     font-size: 16px;
     padding: 15px;
     justify-content:space-between;
-    margin: 0px 15px 10px;
+    margin: 5px;
     text-decoration: none;
     color: #faf3f3;
     font-family: 'Roboto Mono', sans-serif;    
@@ -97,19 +107,34 @@
     background-color: white;
     border-radius: 32px;
     margin: 40px 90px;
-    padding: 10px;
-    width: 350px; 
+    padding: 30px;
+    width: 40%;
     height: 520px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    box-shadow: 1px 1px 15px 1px rgba(140, 126, 126, 0.3);
 }
 
-.procesado__tituloMensaje, .procesado__contenidoMensaje, .textoProcesado__contenidoMensaje, .textoProcesado__ok {
+.textoProcesado__contenidoMensaje {
+    width: 80%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    resize: none;
+    border-radius: 10px;
+    border: none;
+    justify-content: center;
+}
+
+.procesado__tituloMensaje, .procesado__contenidoMensaje, .procesado__imagen, .textoProcesado__contenidoMensaje, .textoProcesado__ok {
     font-family: 'Montserrat', sans-serif;
     margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .textoProcesado {
@@ -117,13 +142,14 @@
     border-radius: 32px;
     margin: 40px 90px;
     padding: 10px;
-    width: 350px; 
+    width: 40%; 
     height: 520px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-between;
-    text-align: center;    
+    text-align: center;   
+    box-shadow: 1px 1px 15px 1px rgba(140, 126, 126, 0.3); 
 }
 
 #textoProcesado, .textoProcesado__ok {
@@ -140,24 +166,32 @@
 .textoProcesado__ok {
     background-color: #47913d;
     border-radius: 10px;
-    margin: 5px;
+    margin: 15px;
     padding: 15px;
     height: 25px;
     color: #faf3f3;    
     font-size: 11px;    
 }
 
-.procesadoBotones {
+.fa-bell {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+}
+
+.textoProcesado__procesadoBotones {
     margin: 10px;
     padding: 10px;
     height: 60px;
-    display: flex;
-    align-items: center;
+    width: 80%;
+    display: flex;    
     justify-content: center;
     align-items: center;
 }
 
-.textoProcesado__botonCopiar, .textoProcesado__botonFinalizar {
+.textoProcesado__procesadoBotones__botonCopiar, .textoProcesado__procesadoBotones__botonFinalizar {
     background-color: #83ed76;
     width: 120px;
     text-align: center;
@@ -167,11 +201,10 @@
     margin: 10px;
     text-decoration: none;
     color: #363030;
-    font-family: 'Roboto Mono', sans-serif;
-    flex-flow: column wrap; 
+    font-family: 'Roboto Mono', sans-serif;    
 }
 
-.textoProcesado__botonCopiar:hover, .textoProcesado__botonFinalizar:hover {
+.textoProcesado__procesadoBotones__botonCopiar:hover, .textoProcesado__procesadoBotones__botonFinalizar:hover {
     background-color: #428f37;
     color: #faf5f5;
     box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.30)
@@ -192,4 +225,122 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     color: whitesmoke;
+}
+
+
+/************* Diseño Responsive *************/
+
+
+/* Tablet */
+@media (max-width: 1200px) {
+    
+    .encabezado{
+        font-size: 30px;
+        height: 100px;
+    }
+
+    .contenido {
+        /*background-color: chocolate;*/
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 5%;
+    }
+
+    .procesar {
+        /*background-color: #398950;*/
+        width: 100%;
+        justify-content: center;   
+        align-items: center;   
+    }
+
+    .procesar__textoProcesar {
+        width: 95%;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .procesar__botones {
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .procesar__botones__encriptar, .procesar__botones__desencriptar {
+        width: 100%;  
+    }
+
+    .procesado, .textoProcesado {
+        /*background-color: chartreuse;*/
+        height: auto;
+        width: 100%;
+        justify-content: center;        
+    }
+
+    .procesado__imagen {
+        display: none;        
+    }
+
+    .textoProcesado__contenidoMensaje {
+        width: 90%;
+        height: auto;
+    }
+
+    .textoProcesado__procesadoBotones {
+        width: auto;
+    }
+}
+
+/* Movil */
+@media screen and (max-width: 767px) {
+
+    .encabezado {
+        font-size: 24px;
+        height: 100px;
+        width: 100%;
+    }
+
+    .contenido {
+        padding: 0px;  
+        width: 100%;
+    }
+
+    .procesar {
+        width: 100%;
+        padding: 0px;
+        
+    }
+
+    .procesar__textoProcesar {
+        width: 90%;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .procesar__botones {
+        flex-wrap: wrap; 
+        width: 85%;
+        justify-content: center;
+        align-items: center;   
+    }
+
+    .procesado, .textoProcesado {
+        width: 85%;        
+    }
+
+    .textoProcesado__procesadoBotones {
+        width: auto;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        flex-wrap: wrap; 
+    }
+
+    .textoProcesado__procesadoBotones__botonCopiar, .textoProcesado__procesadoBotones__botonFinalizar {
+        flex-wrap: wrap; 
+        width: 85%;
+        justify-content: center;
+        align-items: center;
+    }
 }

@@ -15,7 +15,7 @@
         <section class="procesar">
             <div>
                 <article>
-                    <textarea id="textoProcesar" class="procesar__textoProcesar" rows="10" cols="60" placeholder="Ingrese texto aquí"></textarea>
+                    <textarea id="textoProcesar" class="procesar__textoProcesar" rows="20" cols="80" placeholder="Ingrese texto aquí"></textarea>
                 </article>
                 <span class="precaucion">
                     <i class="fas fas-solid fa-exclamation"></i> Solo letras minúsculas y sin acentos.
@@ -33,9 +33,9 @@
         </aside>
         <aside id="textoProcesado" class="textoProcesado">
             <textarea id="textoProcesado__contenidoMensaje" class="textoProcesado__contenidoMensaje" rows="15" cols="20"></textarea>
-            <div class="procesadoBotones">
-                <a href="#" class="textoProcesado__botonCopiar" onclick="copiarMensaje();">Copiar</a>
-                <a href="#" class="textoProcesado__botonFinalizar" onclick="finalizarProceso();">Finalizar</a>
+            <div class="textoProcesado__procesadoBotones">
+                <a href="#" class="textoProcesado__procesadoBotones__botonCopiar" onclick="copiarMensaje();">Copiar</a>
+                <a href="#" class="textoProcesado__procesadoBotones__botonFinalizar" onclick="finalizarProceso();">Finalizar</a>
             </div>            
             <span id="textoProcesado__ok" class="textoProcesado__ok">
                 <i class="fas fas-solid fa-bell"></i> Copiado al portapapeles
