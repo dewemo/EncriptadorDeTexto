@@ -17,7 +17,7 @@ let cadenaTextoEncriptado;
 // ********* Proceso de Encriptar texto *********
 
 function encriptarTexto() {
-    textoEncriptar = (document.getElementById('textoProcesar').value).split('');    
+    textoEncriptar = (document.getElementById('textoProcesar').value).toLowerCase().split('');
     
     textoEncriptar.map(function(letraBuscar) {
         
@@ -73,7 +73,7 @@ function desencriptarTexto() {
                 textoDesencriptar = resultado;  
                 break;    
             case 'imer':
-                resultado = textoDesencriptar.replace(/imer/g, 'i');
+                resultado = textoDesencriptar.replace(/imes/g, 'i');
                 textoDesencriptar = resultado;  
                 break;
             case 'ober':

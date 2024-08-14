@@ -51,6 +51,11 @@
     resize: none;
     border-radius: 10px;
     border: none;
+    text-transform: lowercase;    
+}
+
+.procesar__textoProcesar:focus {
+    outline: none;
 }
 
 .precaucion {
@@ -128,6 +133,10 @@
     border-radius: 10px;
     border: none;
     justify-content: center;
+}
+
+.textoProcesado__contenidoMensaje:focus {
+    outline: none;
 }
 
 .procesado__tituloMensaje, .procesado__contenidoMensaje, .procesado__imagen, .textoProcesado__contenidoMensaje, .textoProcesado__ok {
