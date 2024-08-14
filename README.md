@@ -22,7 +22,8 @@
   Y posteriormente hace clic en el botón ***Finalizar*** para terminar el proceso y volver a la pantalla inicial.  
 
 ### Desarrollado
-- Su desarrollo se realizo usando HTML, CSS y JavaScript
-
--
+El encriptador de texto fue desarrollado usando las tecnologías:
+- HTML5.
+- CSS.
+- JavaScript.
 
